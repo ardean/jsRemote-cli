@@ -1,0 +1,40 @@
+{
+  "name": "jsremote",
+  "version": "0.1.0",
+  "description": "NodeJS desktop remote using HTML5 Pointerlock",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "babel-node server --presets es2015-node",
+    "build": "babel server --out-dir dist --presets es2015-node"
+  },
+  "author": "BigTeri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigTeri/jsremote.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015-node": "^6.1.1",
+    "jspm": "^0.16.47",
+    "socket.io": "^1.5.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "robotjs": "^0.4.5"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "client"
+    },
+    "dependencies": {
+      "jquery": "npm:jquery@^3.1.1",
+      "jspointerlock": "npm:jspointerlock@^0.1.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
