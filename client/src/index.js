@@ -36,11 +36,7 @@ socket.on("connect", () => {
 function mouseMove(e) {
   if (!isConnected) return;
 
-  socket.emit(
-    "mouseMove",
-    e.originalEvent.movementX,
-    e.originalEvent.movementY
-  );
+  socket.emit("mouseMove", e.originalEvent.movementX, e.originalEvent.movementY);
 }
 
 function mouseDown(e) {
@@ -55,34 +51,25 @@ function mouseUp(e) {
   socket.emit("mouseUp", getMouseButton(e.which));
 }
 
-function wheel(e) {
+function mouseScroll(e) {
   if (!isConnected) return;
 
   if (e.originalEvent.deltaY === 0) return;
-  socket.emit(
-    "mouseWheel",
-    e.originalEvent.deltaY
-  );
+  socket.emit("mouseScroll", e.originalEvent.deltaY);
 }
 
-function keyDown(e) {
+function keyboardDown(e) {
   e.preventDefault();
   if (!isConnected) return;
 
-  socket.emit(
-    "keyDown",
-    getKeyboardKey(e)
-  );
+  socket.emit("keyboardDown", getKeyboardKey(e));
 }
 
-function keyUp(e) {
+function keyboardUp(e) {
   e.preventDefault();
   if (!isConnected) return;
 
-  socket.emit(
-    "keyUp",
-    getKeyboardKey(e)
-  );
+  socket.emit("keyboardUp", getKeyboardKey(e));
 }
 
 function bind() {
@@ -90,9 +77,9 @@ function bind() {
     .on("mousemove", mouseMove)
     .on("mousedown", mouseDown)
     .on("mouseup", mouseUp)
-    .on("wheel", wheel)
-    .on("keydown", keyDown)
-    .on("keyup", keyUp);
+    .on("wheel", mouseScroll)
+    .on("keydown", keyboardDown)
+    .on("keyup", keyboardUp);
 }
 
 function unbind() {
@@ -100,9 +87,9 @@ function unbind() {
     .off("mousemove", mouseMove)
     .off("mousedown", mouseDown)
     .off("mouseup", mouseUp)
-    .off("wheel", wheel)
-    .off("keydown", keyDown)
-    .off("keyup", keyUp);
+    .off("wheel", mouseScroll)
+    .off("keydown", keyboardDown)
+    .off("keyup", keyboardUp);
 }
 
 $element.on("click", (e) => {
@@ -131,7 +118,7 @@ function getKeyboardKey(e) {
 function getMouseButton(number) {
   if (number === 3) {
     return "right";
-  } else if(number === 2) {
+  } else if (number === 2) {
     return "middle";
   } else {
     return "left";
