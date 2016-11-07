@@ -1,6 +1,6 @@
 {
   "name": "jsremote",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "NodeJS desktop remote using HTML5 Pointerlock",
   "main": "server/index.js",
   "scripts": {
@@ -19,13 +19,13 @@
   },
   "dependencies": {
     "jspm": "^0.16.47",
+    "robotjs": "^0.4.5",
     "express": "^4.14.0",
-    "robotjs": "^0.4.5"
+    "socket.io": "^1.5.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-es2015-node": "^6.1.1",
-    "socket.io": "^1.5.1"
+    "babel-preset-es2015-node": "^6.1.1"
   },
   "jspm": {
     "directories": {

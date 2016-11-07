@@ -32,10 +32,11 @@ app.use(_express2.default.static(_path2.default.join(__dirname, "../client")));
 const screen = new _screen2.default();
 const mouse = new _mouse2.default(screen);
 const keyboard = new _keyboard2.default();
+const port = 4444;
 const rootPath = "";
 
-const httpSocket = app.listen(4444, () => {
-  console.log("server started");
+const httpSocket = app.listen(port, () => {
+  console.log("server started on port ", port);
 });
 
 const io = (0, _socket2.default)(httpSocket, {

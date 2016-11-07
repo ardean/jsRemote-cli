@@ -41,7 +41,7 @@ export default class Mouse {
     robot.moveMouse(this.x, this.y);
   }
 
-  scroll() {
+  scroll(deltaY) {
     robot.scrollMouse(2, deltaY > 0 ? "down" : "up");
   }
 }
