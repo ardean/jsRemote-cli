@@ -13,9 +13,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _robotjs2.default.setKeyboardDelay(0);
 
 class Keyboard {
-  constructor() {}
+  constructor() {
+    this.pressedKeys = {};
+  }
 
   down(key) {
+    if (this.pressedKeys[key]) this.up(key);
+
+    this.pressedKeys[key] = true;
+
     try {
       _robotjs2.default.keyToggle(key, "down");
     } catch (err) {
@@ -24,6 +30,10 @@ class Keyboard {
   }
 
   up(key) {
+    if (!this.pressedKeys[key]) return;
+
+    this.pressedKeys[key] = false;
+
     try {
       _robotjs2.default.keyToggle(key, "up");
     } catch (err) {

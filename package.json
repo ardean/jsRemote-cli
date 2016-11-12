@@ -1,6 +1,6 @@
 {
   "name": "jsremote",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "NodeJS desktop remote using HTML5 Pointerlock",
   "main": "server/index.js",
   "scripts": {
