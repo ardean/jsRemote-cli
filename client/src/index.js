@@ -4,11 +4,8 @@ import Connection from "./connection";
 import hint from "./hint";
 import keys from "./keymap";
 
-const element = document.body;
-const $element = $(element);
-
-// TODO: pointerlock should accept jquery selector -> jspointerlock needs update
-const pointerLock = new PointerLock(element);
+const $element = $(".fullscreen");
+const pointerLock = new PointerLock($element);
 const connection = new Connection();
 const socket = connection.socket;
 
@@ -18,7 +15,7 @@ connection
     updateHint();
   })
   .on("disconnect", () => {
-    // TODO: cancelPointerLock -> jspointerlock needs update
+    pointerLock.exitPointerLock();
     updateBindings();
     updateHint();
   });

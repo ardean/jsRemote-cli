@@ -19,7 +19,11 @@ System.config({
     "core-js": "npm:core-js@1.2.7",
     "events": "github:jspm/nodelibs-events@0.1.1",
     "jquery": "npm:jquery@3.1.1",
-    "jspointerlock": "npm:jspointerlock@0.1.3",
+    "jspointerlock": "github:BigTeri/jspointerlock@0.2.0",
+    "github:BigTeri/jspointerlock@0.2.0": {
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "jquery": "npm:jquery@3.1.1"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -66,10 +70,6 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
-    },
-    "npm:jspointerlock@0.1.3": {
-      "events": "github:jspm/nodelibs-events@0.1.1",
-      "jquery": "npm:jquery@3.1.1"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
