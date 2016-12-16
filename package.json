@@ -5,6 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "babel-node server --presets es2015-node",
+    "debug-cli": "npm run build && node ./dist/cli.js -p 4000",
     "build": "babel server --out-dir dist --presets es2015-node",
     "postinstall": "jspm i --production"
   },
