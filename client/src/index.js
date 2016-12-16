@@ -91,7 +91,7 @@ function keyboardUp(e) {
 }
 
 function bind() {
-  $element
+  $(document)
     .on("mousemove", mouseMove)
     .on("mousedown", mouseDown)
     .on("mouseup", mouseUp)
@@ -101,7 +101,7 @@ function bind() {
 }
 
 function unbind() {
-  $element
+  $(document)
     .off("mousemove", mouseMove)
     .off("mousedown", mouseDown)
     .off("mouseup", mouseUp)
