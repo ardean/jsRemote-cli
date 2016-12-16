@@ -12,6 +12,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 class Screen {
   constructor() {
+    this.refreshSize();
+  }
+
+  refreshSize() {
     const size = _robotjs2.default.getScreenSize();
     this.width = size.width;
     this.height = size.height;
