@@ -32,6 +32,11 @@ Open remote client on another machines's browser:
 
 http://myipaddress:4444/
 
+## TODO
+
+- mobile controls
+- special controls (escape button)
+
 ## License
 
 [MIT](LICENSE)
