@@ -2,7 +2,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
-**NodeJS Desktop Remote using HTML5 Pointerlock**
+**NodeJS Desktop Remote using HTML5 Pointer Lock**
 
 I use this package to control my Windows PC (hooked up to a projector) from my mac.
 
