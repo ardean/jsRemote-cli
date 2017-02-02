@@ -15,7 +15,7 @@ connection
     updateHint();
   })
   .on("disconnect", () => {
-    pointerLock.exitPointerLock();
+    PointerLock.exitPointerLock();
     updateBindings();
     updateHint();
   });

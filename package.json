@@ -1,13 +1,12 @@
 {
   "name": "jsremote",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "NodeJS Desktop Remote using W3C Pointer Lock",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "babel-node server/cli.js",
-    "debug-cli": "npm run build && node ./dist/cli.js -p 4000",
-    "build": "babel server --out-dir dist",
-    "postinstall": "jspm i --production"
+    "build": "npm run cleanup && babel server --out-dir dist/server",
+    "cleanup": "del-cli dist"
   },
   "bin": {
     "jsRemote": "./bin/index.js"
@@ -18,6 +17,7 @@
     "desktop",
     "html5-pointer-lock",
     "javascript",
+    "jsremote",
     "jspointerlock",
     "nodejs",
     "pointerlock",
@@ -30,27 +30,39 @@
   "dependencies": {
     "commander": "^2.9.0",
     "express": "^4.14.0",
-    "jspm": "^0.16.47",
     "robotjs": "^0.4.5",
     "socket.io": "^1.5.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-node6": "^11.0.0"
+    "babel-preset-node6": "^11.0.0",
+    "cpy-cli": "^1.0.1",
+    "del-cli": "^0.2.1",
+    "jspm": "^0.17.0-beta.38"
   },
   "jspm": {
+    "name": "jsremote",
+    "main": "index.js",
     "directories": {
-      "baseURL": "client"
+      "baseURL": "public"
     },
     "dependencies": {
+      "jspointerlock": "github:ardean/jsPointerLock@^0.3.3",
       "events": "github:jspm/nodelibs-events@^0.1.1",
-      "jquery": "npm:jquery@^3.1.1",
-      "jspointerlock": "github:ardean/jsPointerLock@^0.3.3"
+      "jquery": "npm:jquery@^3.1.1"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.20"
+    },
+    "peerDependencies": {
+      "assert": "npm:jspm-nodelibs-assert@^0.2.0",
+      "process": "npm:jspm-nodelibs-process@^0.2.0",
+      "util": "npm:jspm-nodelibs-util@^0.2.0"
+    },
+    "overrides": {
+      "npm:jquery@3.1.1": {
+        "format": "amd"
+      }
     }
   }
 }

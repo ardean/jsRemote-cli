@@ -17,5 +17,5 @@ server.on("clientConnect", (socket) => {
 });
 
 server.listen(() => {
-  log(`jsremote server is running on port ${server.port}`);
+  log(`jsRemote is running on port ${server.port}`);
 });
