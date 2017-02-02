@@ -1,6 +1,4 @@
-import {
-  EventEmitter
-} from "events";
+import { EventEmitter } from "events";
 import path from "path";
 import express from "express";
 import createSocketIOServer from "socket.io";

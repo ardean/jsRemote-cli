@@ -1,6 +1,4 @@
-import {
-  EventEmitter
-} from "events";
+import { EventEmitter } from "events";
 import io from "../sockets/socket.io.js";
 
 export default class Connection extends EventEmitter {

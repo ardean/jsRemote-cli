@@ -19,8 +19,8 @@ System.config({
     "core-js": "npm:core-js@1.2.7",
     "events": "github:jspm/nodelibs-events@0.1.1",
     "jquery": "npm:jquery@3.1.1",
-    "jspointerlock": "github:BigTeri/jspointerlock@0.2.0",
-    "github:BigTeri/jspointerlock@0.2.0": {
+    "jspointerlock": "github:ardean/jsPointerLock@0.3.3",
+    "github:ardean/jsPointerLock@0.3.3": {
       "events": "github:jspm/nodelibs-events@0.1.1",
       "jquery": "npm:jquery@3.1.1"
     },

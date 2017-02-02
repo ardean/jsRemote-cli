@@ -1,2 +1,2 @@
-call jsremote.cmd
+call jsRemote.cmd
 exit 0

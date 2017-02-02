@@ -1,12 +1,9 @@
-import {
-  log
-} from "util";
+import { log } from "util";
 import program from "commander";
 import Server from "./server";
-import pkg from "../package";
 
 program
-  .version(pkg.version)
+  .version("0.3.0")
   .option("-p, --port [port]", "sets server port", parseInt)
   .parse(process.argv);
 
