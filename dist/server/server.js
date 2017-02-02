@@ -59,7 +59,7 @@ class Server extends _events.EventEmitter {
     callback = callback || function () {};
 
     this.app = (0, _express2.default)();
-    this.app.use(_express2.default.static(_path2.default.join(__dirname, "../public")));
+    this.app.use(_express2.default.static(_path2.default.join(__dirname, "../client")));
 
     this.socket = this.app.listen(port, () => {
       this.startRefreshInterval();

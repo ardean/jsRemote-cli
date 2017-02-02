@@ -1,11 +1,16 @@
 {
   "name": "jsremote",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "NodeJS Desktop Remote using W3C Pointer Lock",
   "main": "index.js",
   "scripts": {
     "start": "babel-node server/cli.js",
-    "build": "npm run cleanup && babel server --out-dir dist/server",
+    "build": "npm run cleanup && npm run build-server && npm run build-client",
+    "build-server": "babel server --out-dir dist/server",
+    "build-client": "npm run build-js && npm run build-html && npm run build-css",
+    "build-js": "jspm build src/index.js dist/client/index.js --minify --skip-source-maps",
+    "build-html": "cpy client/*.html dist/client/",
+    "build-css": "cpy client/css/**/*.css dist/client/",
     "cleanup": "del-cli dist"
   },
   "bin": {
@@ -44,7 +49,7 @@
     "name": "jsremote",
     "main": "index.js",
     "directories": {
-      "baseURL": "public"
+      "baseURL": "client"
     },
     "dependencies": {
       "jspointerlock": "github:ardean/jsPointerLock@^0.3.3",

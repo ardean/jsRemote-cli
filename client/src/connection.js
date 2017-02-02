@@ -1,5 +1,6 @@
 import EventEmitter from "events";
-import io from "../sockets/socket.io.js";
+
+const io = window.io;
 
 export default class Connection extends EventEmitter {
   constructor() {
