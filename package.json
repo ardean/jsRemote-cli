@@ -1,6 +1,6 @@
 {
   "name": "jsremote",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "NodeJS Desktop Remote using W3C Pointer Lock",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build-client": "npm run build-js && npm run build-html && npm run build-css",
     "build-js": "jspm build src/index.js dist/client/index.js --minify --skip-source-maps",
     "build-html": "cpy client/*.html dist/client/",
-    "build-css": "cpy client/css/**/*.css dist/client/",
+    "build-css": "cpy client/css/**/*.css dist/client/css",
     "cleanup": "del-cli dist"
   },
   "bin": {

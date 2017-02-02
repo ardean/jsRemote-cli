@@ -33,6 +33,7 @@ export default class Server extends EventEmitter {
     callback = callback || function () {};
 
     this.app = express();
+    this.app.disable("x-powered-by");
     this.app.use(express.static(path.join(__dirname, "../client")));
 
     this.socket = this.app.listen(port, () => {
