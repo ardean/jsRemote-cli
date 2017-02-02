@@ -14,6 +14,17 @@
   },
   "author": "ardean",
   "license": "MIT",
+  "keywords": [
+    "desktop",
+    "html5-pointer-lock",
+    "javascript",
+    "jspointerlock",
+    "nodejs",
+    "pointerlock",
+    "remote",
+    "remote-desktop",
+    "remote-control"
+  ],
   "repository": "https://github.com/ardean/jsRemote",
   "bugs": "https://github.com/ardean/jsRemote/issues",
   "dependencies": {
