@@ -1,6 +1,7 @@
 # jsRemote
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
+[![License][license-image]][license-url]
 
 **NodeJS Desktop Remote using W3C Pointer Lock**
 
@@ -45,3 +46,5 @@ http://myipaddress:4444/
 [npm-url]: https://npmjs.org/package/jsremote
 [downloads-image]: https://img.shields.io/npm/dm/jsremote.svg
 [downloads-url]: https://npmjs.org/package/jsremote
+[license-image]: https://img.shields.io/npm/l/jsremote.svg
+[license-url]: LICENSE
