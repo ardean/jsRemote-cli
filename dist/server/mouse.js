@@ -52,7 +52,7 @@ class Mouse {
   }
 
   scroll(deltaY) {
-    _robotjs2.default.scrollMouse(2, deltaY > 0 ? "down" : "up");
+    _robotjs2.default.scrollMouse(1, deltaY > 0 ? "down" : "up");
   }
 }
 exports.default = Mouse;
