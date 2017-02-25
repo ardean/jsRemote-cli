@@ -35,12 +35,11 @@ http://myipaddress:4444/
 
 ## TODO
 
-- mobile controls
 - special controls (escape button)
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE.md)
 
 [npm-image]: https://img.shields.io/npm/v/jsremote.svg
 [npm-url]: https://npmjs.org/package/jsremote

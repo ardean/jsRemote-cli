@@ -2,7 +2,7 @@ import EventEmitter from "events";
 
 const io = window.io;
 
-export default class Connection extends EventEmitter {
+class Connection extends EventEmitter {
   constructor() {
     super();
 
@@ -19,7 +19,10 @@ export default class Connection extends EventEmitter {
       })
       .on("disconnect", () => {
         this.isConnected = false;
+        this.wasConnected = true;
         this.emit("disconnect");
       });
   }
 }
+
+export default new Connection();
