@@ -52,4 +52,4 @@ There are 2 modes to control a host:
 [downloads-image]: https://img.shields.io/npm/dm/jsremote.svg
 [downloads-url]: https://npmjs.org/package/jsremote
 [license-image]: https://img.shields.io/npm/l/jsremote.svg
-[license-url]: LICENSE
+[license-url]: LICENSE.md
