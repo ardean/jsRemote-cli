@@ -1,6 +1,6 @@
 {
   "name": "jsremote",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "NodeJS Desktop Remote using W3C Pointer Lock & Events",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,10 @@
     "pointerlock",
     "remote",
     "remote-desktop",
-    "remote-control"
+    "remote-control",
+    "pointer-events",
+    "touch-support",
+    "touch"
   ],
   "repository": "https://github.com/ardean/jsRemote",
   "bugs": "https://github.com/ardean/jsRemote/issues",

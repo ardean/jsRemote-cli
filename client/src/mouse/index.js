@@ -83,7 +83,7 @@ class Desktop {
   }
 
   updateBindings() {
-    if (this.pointerLock.isLocked) {
+    if (this.pointerLock.isLocked && connection.isConnected) {
       this.bindLockedEvents();
     } else {
       this.unbindLockedEvents();
@@ -91,42 +91,30 @@ class Desktop {
   }
 
   mouseMove(e) {
-    if (!connection.isConnected) return;
-
     socket.emit("mouseMove", e.originalEvent.movementX, e.originalEvent.movementY);
   }
 
   mouseDown(e) {
-    if (!connection.isConnected) return;
-
     socket.emit("mouseDown", this.getMouseButton(e.which));
   }
 
   mouseUp(e) {
-    if (!connection.isConnected) return;
-
     socket.emit("mouseUp", this.getMouseButton(e.which));
   }
 
   mouseScroll(e) {
-    if (!connection.isConnected) return;
-
     if (e.originalEvent.deltaY === 0) return;
     socket.emit("mouseScroll", e.originalEvent.deltaY);
   }
 
   keyboardDown(e) {
     e.preventDefault();
-    if (!connection.isConnected) return;
-
-    socket.emit("keyboardDown", getKeyboardKey(e));
+    socket.emit("keyboardDown", this.getKeyboardKey(e));
   }
 
   keyboardUp(e) {
     e.preventDefault();
-    if (!connection.isConnected) return;
-
-    socket.emit("keyboardUp", getKeyboardKey(e));
+    socket.emit("keyboardUp", this.getKeyboardKey(e));
   }
 
   bindLockedEvents() {
