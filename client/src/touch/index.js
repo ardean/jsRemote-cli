@@ -8,7 +8,7 @@ const socket = connection.socket;
 
 class PointerEvents {
   activate() {
-    this.$element = $(".fullscreen").addClass("touch");
+    this.$element = $(".fullscreen");
     this.gestures = new Gestures(this.$element)
       .on("scroll", (scrollDirection) => {
         socket.emit("mouseScroll", scrollDirection === "up" ? -1 : 1);

@@ -1,6 +1,5 @@
 html,
-body,
-.fullscreen {
+body {
   margin: 0;
   height: 100%;
   width: 100%;
@@ -10,6 +9,8 @@ body,
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: column;
 }
 
 .fullscreen {
@@ -20,6 +21,7 @@ body,
   user-select: none;
   cursor: pointer;
   touch-action: none;
+  flex: 1;
 }
 
 .hint,
