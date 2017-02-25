@@ -1,7 +1,7 @@
 {
   "name": "jsremote",
-  "version": "0.4.0",
-  "description": "NodeJS Desktop Remote using W3C Pointer Lock",
+  "version": "0.4.1",
+  "description": "NodeJS Desktop Remote using W3C Pointer Lock & Events",
   "main": "index.js",
   "scripts": {
     "start": "babel-node server/cli.js",

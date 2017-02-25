@@ -3,14 +3,14 @@
 [![NPM Downloads][downloads-image]][downloads-url]
 [![License][license-image]][license-url]
 
-**NodeJS Desktop Remote using W3C Pointer Lock**
+**NodeJS Desktop Remote using W3C Pointer Lock & Events**
 
 I use this package to control my Windows PC (hooked up to a projector) from my mac.
 
 Sadly I could not find a way to start the service automatically at boot time.
 On my Desktop is a shortcut to a "start jsRemote" batch file `run as Admin enabled`.
 
-This package should work with `Linux` / `Mac` / `Windows` but is **only tested** on Windows.
+This package should work with `Linux` / `macOS` / `Windows` but was **only tested** on Windows and a little bit on macOS.
 
 And yes, you can play `most` games with it... :wink:
 
@@ -29,12 +29,18 @@ jsRemote
 
 - optional `-p PORT` /  `--port PORT`
 
-Open remote client on another machines's browser:
+Now open `http://HOST_IP_ADDRESS:PORT/` on your remote device and choose a mode to control your host.
 
-http://myipaddress:4444/
+## Modes
+
+There are 2 modes to control a host:
+
+- `Mouse` - default on **Desktop** devices
+- `Touch` - default on **Mobile** devices
 
 ## TODO
 
+- virtual keyboard support (touch only devices)
 - special controls (escape button)
 
 ## License
