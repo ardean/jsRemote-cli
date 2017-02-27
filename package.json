@@ -1,6 +1,6 @@
 {
   "name": "jsremote",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "NodeJS Desktop Remote using W3C Pointer Lock & Events",
   "main": "dist/server/index.js",
   "scripts": {

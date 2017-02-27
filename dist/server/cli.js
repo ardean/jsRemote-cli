@@ -16,7 +16,7 @@ var _chalk = require("chalk");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_commander2.default.version("0.5.0").option("-p, --port [port]", "sets server port", parseInt).parse(process.argv);
+_commander2.default.version("0.5.1").option("-p, --port [port]", "sets server port", parseInt).parse(process.argv);
 
 const server = new _server2.default({
   port: _commander2.default.port
