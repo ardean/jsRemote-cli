@@ -6,9 +6,8 @@
     "request": "launch",
     "program": "${workspaceRoot}/server/cli.js",
     "stopOnEntry": false,
-    "args": [],
     "cwd": "${workspaceRoot}",
-    "preLaunchTask": null,
+    "preLaunchTask": "dev",
     "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
     "runtimeArgs": [
       "--nolazy"
@@ -17,8 +16,6 @@
       "NODE_ENV": "development"
     },
     "console": "internalConsole",
-    "sourceMaps": false,
-    "port": 5858,
-    "outFiles": []
+    "port": 5858
   }]
 }
