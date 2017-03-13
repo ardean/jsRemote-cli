@@ -11,7 +11,7 @@ class PointerEvents {
     this.$element = $(".fullscreen");
     this.gestures = new Gestures(this.$element)
       .on("scroll", (scrollDirection) => {
-        socket.emit("mouseScroll", scrollDirection === "up" ? -1 : 1);
+        socket.emit("mouseScroll", 0.5, scrollDirection);
         hint.setText("Scrolling " + scrollDirection + "...");
       })
       .on("scrolled", () => {

@@ -104,7 +104,7 @@ class Desktop {
 
   mouseScroll(e) {
     if (e.originalEvent.deltaY === 0) return;
-    socket.emit("mouseScroll", e.originalEvent.deltaY);
+    socket.emit("mouseScroll", 1, e.originalEvent.deltaY > 0 ? "down" : "up");
   }
 
   keyboardDown(e) {

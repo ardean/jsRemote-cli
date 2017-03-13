@@ -50,7 +50,7 @@ export default class Server extends EventEmitter {
         .on("mouseMove", (movementX, movementY) => this.mouse.move(movementX, movementY))
         .on("mouseDown", (key) => this.mouse.down(key))
         .on("mouseUp", (key) => this.mouse.up(key))
-        .on("mouseScroll", (deltaY) => this.mouse.scroll(deltaY))
+        .on("mouseScroll", (amount, direction) => this.mouse.scroll(amount, direction))
         .on("keyboardDown", (key) => this.keyboard.down(key))
         .on("keyboardUp", (key) => this.keyboard.up(key));
 

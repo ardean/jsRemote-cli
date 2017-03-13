@@ -72,7 +72,7 @@ class Server extends _events.EventEmitter {
     this.io = (0, _socket2.default)(this.socket, {
       path: fixWindowsPath(_path2.default.join("/", this.rootPath, "/sockets"))
     }).on("connection", socket => {
-      socket.on("mouseMove", (movementX, movementY) => this.mouse.move(movementX, movementY)).on("mouseDown", key => this.mouse.down(key)).on("mouseUp", key => this.mouse.up(key)).on("mouseScroll", deltaY => this.mouse.scroll(deltaY)).on("keyboardDown", key => this.keyboard.down(key)).on("keyboardUp", key => this.keyboard.up(key));
+      socket.on("mouseMove", (movementX, movementY) => this.mouse.move(movementX, movementY)).on("mouseDown", key => this.mouse.down(key)).on("mouseUp", key => this.mouse.up(key)).on("mouseScroll", (amount, direction) => this.mouse.scroll(amount, direction)).on("keyboardDown", key => this.keyboard.down(key)).on("keyboardUp", key => this.keyboard.up(key));
 
       this.emit("clientConnect", socket);
     });

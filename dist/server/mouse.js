@@ -51,8 +51,8 @@ class Mouse {
     _robotjs2.default.moveMouse(this.x, this.y);
   }
 
-  scroll(deltaY) {
-    _robotjs2.default.scrollMouse(1, deltaY > 0 ? "down" : "up");
+  scroll(amount, direction) {
+    _robotjs2.default.scrollMouse(amount, direction);
   }
 }
 exports.default = Mouse;
