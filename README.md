@@ -1,5 +1,6 @@
 # jsRemote
 
+[![Build Status](https://travis-ci.org/ardean/jsRemote.svg?branch=master)](https://travis-ci.org/ardean/jsRemote)
 [![Greenkeeper badge](https://badges.greenkeeper.io/ardean/jsRemote.svg)](https://greenkeeper.io/)
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
