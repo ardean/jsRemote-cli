@@ -11,7 +11,7 @@
     "build-js": "jspm build src/index.js dist/client/index.js --minify --skip-source-maps",
     "build-css": "cpy client/css/**/*.css dist/client/css",
     "cleanup": "del-cli dist",
-    "test": "apt-get install libxtst-dev && yarn install && jspm i && yarn run build"
+    "test": "yarn install && jspm i && yarn run build"
   },
   "bin": {
     "jsRemote": "./bin/index.js"
