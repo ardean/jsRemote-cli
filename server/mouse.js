@@ -42,6 +42,6 @@ export default class Mouse {
   }
 
   scroll(amount, direction) {
-    robot.scrollMouse(amount, direction);
+    robot.scrollMouse(direction === "up" ? amount : -amount, 0);
   }
 }

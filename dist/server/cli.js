@@ -16,7 +16,7 @@ var _chalk = require("chalk");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_commander2.default.version("0.5.1").option("-p, --port [port]", "sets server port", parseInt).parse(process.argv);
+_commander2.default.version("0.5.4").option("-p, --port [port]", "sets server port", parseInt).parse(process.argv);
 
 const server = new _server2.default({
   port: _commander2.default.port
@@ -33,7 +33,7 @@ server.on("clientConnect", socket => {
 server.listen(() => {
   (0, _util.log)((0, _chalk.cyan)(`jsRemote is running`));
   getIPv4Addresses().forEach(address => {
-    (0, _util.log)((0, _chalk.green)(`http://${ address }:${ server.port }/`));
+    (0, _util.log)((0, _chalk.green)(`http://${address}:${server.port}/`));
   });
 });
 

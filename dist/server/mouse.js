@@ -52,7 +52,7 @@ class Mouse {
   }
 
   scroll(amount, direction) {
-    _robotjs2.default.scrollMouse(amount, direction);
+    _robotjs2.default.scrollMouse(direction === "up" ? amount : -amount, 0);
   }
 }
 exports.default = Mouse;

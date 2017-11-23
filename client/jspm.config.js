@@ -40,15 +40,10 @@ SystemJS.config({
     "util": "npm:jspm-nodelibs-util@0.2.1"
   },
   packages: {
-    "github:jspm/nodelibs-events@0.1.1": {
-      "map": {
-        "events": "npm:events@1.0.2"
-      }
-    },
     "github:ardean/jsPointerLock@1.0.0": {
       "map": {
         "jquery": "npm:jquery@3.1.1",
-        "events": "github:jspm/nodelibs-events@0.1.1"
+        "events": "npm:jspm-nodelibs-events@0.2.0"
       }
     }
   }

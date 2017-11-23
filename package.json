@@ -1,16 +1,17 @@
 {
   "name": "jsremote",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "NodeJS Desktop Remote using W3C Pointer Lock & Events",
   "main": "dist/server/index.js",
   "scripts": {
     "start": "gulp dev && babel-node server/cli.js",
-    "build": "npm run cleanup && npm run build-server && npm run build-client",
+    "build": "yarn cleanup && yarn build-server && yarn build-client",
     "build-server": "babel server --out-dir dist/server",
-    "build-client": "npm run build-js && gulp build-client && npm run build-css",
+    "build-client": "yarn build-js && gulp build-client && yarn build-css",
     "build-js": "jspm build src/index.js dist/client/index.js --minify --skip-source-maps",
     "build-css": "cpy client/css/**/*.css dist/client/css",
-    "cleanup": "del-cli dist"
+    "cleanup": "del-cli dist",
+    "test": "yarn install && jspm i && yarn run build"
   },
   "bin": {
     "jsRemote": "./bin/index.js"
