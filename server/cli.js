@@ -5,7 +5,7 @@ import { networkInterfaces } from "os";
 import { green, cyan, magenta } from "chalk";
 
 program
-  .version("0.5.5")
+  .version("0.5.6")
   .option("-p, --port [port]", "sets server port", parseInt)
   .parse(process.argv);
 
