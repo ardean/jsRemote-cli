@@ -1,17 +1,8 @@
-# jsRemote
+# jsRemote CLI
 
-[![Build Status](https://travis-ci.org/ardean/jsRemote.svg?branch=master)](https://travis-ci.org/ardean/jsRemote)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ardean/jsRemote.svg)](https://greenkeeper.io/)
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
-[![License][license-image]][license-url]
-
-**NodeJS Desktop Remote using W3C Pointer Lock & Events**
-
-I use this package to control my Windows PC (hooked up to a projector) from my mac.
-
-Sadly I could not find a way to start the service automatically at boot time.
-On my Desktop is a shortcut to a "start jsRemote" batch file `run as Admin enabled`.
+[![NPM Version](https://img.shields.io/npm/v/jsremote.svg)](https://npmjs.org/package/jsremote)
+[![NPM Downloads](https://img.shields.io/npm/dm/jsremote.svg)](https://npmjs.org/package/jsremote)
+[![License](https://img.shields.io/npm/l/jsremote.svg)](LICENSE.md)
 
 This package should work with `Linux` / `macOS` / `Windows` but was **only tested** on Windows and a little bit on macOS.
 
@@ -27,7 +18,7 @@ npm i -g jsremote
 ## Launch
 
 ```bash
-jsRemote
+jsremote
 ```
 
 - optional `-p PORT` /  `--port PORT`
@@ -41,18 +32,6 @@ There are 2 modes to control a host:
 - `Mouse` - default on **Desktop** devices
 - `Touch` - default on **Mobile** devices
 
-## TODO
-
-- virtual keyboard support (touch only devices)
-- special controls (escape button)
-
 ## License
 
 [MIT](LICENSE.md)
-
-[npm-image]: https://img.shields.io/npm/v/jsremote.svg
-[npm-url]: https://npmjs.org/package/jsremote
-[downloads-image]: https://img.shields.io/npm/dm/jsremote.svg
-[downloads-url]: https://npmjs.org/package/jsremote
-[license-image]: https://img.shields.io/npm/l/jsremote.svg
-[license-url]: LICENSE.md

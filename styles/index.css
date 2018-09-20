@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   margin: 0;
   height: 100%;
   width: 100%;
@@ -7,13 +6,12 @@ body {
   color: #ccc;
   background-color: #000;
   user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
   display: flex;
   flex-direction: column;
 }
 
-.fullscreen {
+.screen {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,8 +22,7 @@ body {
   flex: 1;
 }
 
-.hint,
-.loading {
+.hint {
   font-size: 6vw;
 }
 
@@ -33,15 +30,11 @@ body {
   color: #FF0033;
 }
 
-.hint {
-  display: none;
-}
-
 .toolbar {
   display: flex;
 }
 
-.flex {
+.toolbar-left {
   flex: 1;
 }
 

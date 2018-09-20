@@ -1,6 +1,4 @@
+.DS_Store
 node_modules
-jspm_packages
-npm-debug.log
 *.log
-/client/index.html
-yarn.lock
+dist
