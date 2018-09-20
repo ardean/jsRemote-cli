@@ -1,10 +1,10 @@
 {
   "name": "jsremote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jsRemote CLI",
   "repository": "https://github.com/ardean/jsRemote-cli",
   "bugs": "https://github.com/ardean/jsRemote-cli/issues",
-  "main": "dist/index.js",
+  "main": "dist/cli/index.js",
   "author": "ardean",
   "license": "MIT",
   "keywords": [
@@ -26,6 +26,7 @@
     "touch"
   ],
   "files": [
+    "bin",
     "dist"
   ],
   "scripts": {

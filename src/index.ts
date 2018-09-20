@@ -5,7 +5,7 @@ import Server from "jsremote-server";
 import { networkInterfaces } from "os";
 import chalk from "chalk";
 
-const version = "1.0.0";
+const version = "1.0.1";
 
 program
   .version(version)
