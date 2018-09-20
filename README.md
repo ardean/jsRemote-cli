@@ -1,10 +1,6 @@
 # jsRemote (deprecated)
 
-[![Build Status](https://travis-ci.org/ardean/jsRemote.svg?branch=master)](https://travis-ci.org/ardean/jsRemote)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ardean/jsRemote.svg)](https://greenkeeper.io/)
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
-[![License][license-image]][license-url]
+**This is no longer supported, please consider using [jsRemote CLI](https://github.com/ardean/jsRemote-cli) instead.**
 
 **NodeJS Desktop Remote using W3C Pointer Lock & Events**
 
