@@ -38,8 +38,7 @@
     "test": "yarn build"
   },
   "bin": {
-    "jsremote": "./bin/index.js",
-    "jsRemote": "./bin/index.js"
+    "jsremote": "./bin/index.js"
   },
   "dependencies": {
     "@types/node": "^9.4.0",
