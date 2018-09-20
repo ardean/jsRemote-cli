@@ -3,27 +3,24 @@
 
 <head>
   <title>jsRemote</title>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="jsRemote">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#cccccc">
-  <link rel="stylesheet" href="./css/index.css">
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="jsRemote" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#cccccc" />
+  <link rel="stylesheet" href="./styles/index.css" />
 </head>
 
 <body>
   <div class="toolbar">
-    <div class="flex"></div>
+    <div class="toolbar-left"></div>
     <div class="toggle-mode"></div>
   </div>
-  <div class="fullscreen">
-    <h1 class="loading">Loading...</h1>
-    <h1 class="hint"></h1>
+  <div class="screen">
+    <h1 class="hint">Loading...</h1>
   </div>
-  <script src="sockets/socket.io.js"></script>
-  <!-- inject:html -->
-  <!-- endinject -->
+  <script src="jsremote.js"></script>
 </body>
 
 </html>
